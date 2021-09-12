@@ -70,9 +70,15 @@ promessa
     let nomes = [];
 
     for (let repositorio of repositorios) {
-      nomes.push(
-        "<li>" + repositorio.name + " " + repositorio.svn_url + "</li>"
-      );
-    }
-    githubRepositorios.innerHTML = nomes;
+    let url = repositorio.html_url;
+    let nome = repositorio.name;
+      nomes.push(`
+      <li> 
+      <a href = "$ {url}"> ${url}
+      </a>
+      </li>
+      `);
+      }
+      
+      githubRepositorios.innerHTML = nomes;
   });
