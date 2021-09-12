@@ -49,6 +49,9 @@ if (campoMensagem.value.length === 0) {
 } else {
   mensagemMensagem.innerHTML = "";
 }
+if (! formularioValido) {
+  event.preventDefault ();
+}
 
 });
 
