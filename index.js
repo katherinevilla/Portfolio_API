@@ -69,7 +69,7 @@ promessa
     let nome = repositorio.name;
       nomes.push(`
     <li> 
-    <a href = "$ {url}"> ${url}
+    ${nome} <a href = "$ {url}"> ${url}
     </a>
     </li>
     `);
