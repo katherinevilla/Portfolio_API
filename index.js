@@ -25,7 +25,7 @@ if (campoNome.value.length === 0) {
 }
 //event.preventDefault()
 
-campoEmail.value = "";
+//campoEmail.value = "";
 
 if (campoEmail.value.length === "") {
   mensagemEmail.innerHTML = "Digite seu email";
@@ -39,16 +39,11 @@ if (campoEmail.value.indexOf("@") === -1 || campoEmail.value.indexOf(".") === -1
   campoEmail.classList.remove("errorInput")
 }
 
-
-Fone.value = "";
-
 if (Fone.value.length === 0) {
   mensagemFone.innerHTML = "Digite seu Fone";
 } else {
   mensagemFone.innerHTML = " ";
 }
-
-campoMensagem.value = "";
 
 if (campoMensagem.value.length === 0) {
   mensagemMensagem.innerHTML = "Digite sua mensagem";
@@ -56,14 +51,10 @@ if (campoMensagem.value.length === 0) {
   mensagemMensagem.innerHTML = "";
 }
 
-
 });
 
-
 let promessa = fetch("https://api.github.com/users/katherinevilla/repos");
-
 let githubRepositorios = document.getElementById("repositiGithub");
-
 promessa
   .then(function (retorno) {
     return retorno.json();
