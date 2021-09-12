@@ -1,10 +1,9 @@
 let botaoEnviar = document.getElementById('botaoEnviar')
 let formulario = document.getElementsByClassName ("fomu_contato")
   
-
 botaoEnviar.addEventListener('click', (event) => {
+  let formularioValido = true;
     
-
 let campoNome = document.getElementById("nome");
 let mensagemNome = document.getElementById("mensagemNome");
 
@@ -16,19 +15,17 @@ let campoMensagem = document.getElementById("Mensagem");
 let mensagemMensagem = document.getElementById("mensagemMensagem");
 
 
-//campoNome.value = "";
-
 if (campoNome.value.length === 0) {
   mensagemNome.innerHTML = "Digite seu nome";
+  formularioValido = false;
 } else {
   mensagemNome.innerHTML = "";
 }
-//event.preventDefault()
-
-//campoEmail.value = "";
 
 if (campoEmail.value.length === "") {
   mensagemEmail.innerHTML = "Digite seu email";
+  formularioValido = false;
+  formularioValido = false;
 } else {
   mensagemEmail.innerHTML = "";
 }
@@ -41,12 +38,14 @@ if (campoEmail.value.indexOf("@") === -1 || campoEmail.value.indexOf(".") === -1
 
 if (Fone.value.length === 0) {
   mensagemFone.innerHTML = "Digite seu Fone";
+  formularioValido = false;
 } else {
   mensagemFone.innerHTML = " ";
 }
 
 if (campoMensagem.value.length === 0) {
   mensagemMensagem.innerHTML = "Digite sua mensagem";
+  formularioValido = false;
 } else {
   mensagemMensagem.innerHTML = "";
 }
