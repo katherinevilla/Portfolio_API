@@ -23,11 +23,11 @@ if (campoNome.value.length === 0) {
 } else {
   mensagemNome.innerHTML = "";
 }
-event.preventDefault()
+//event.preventDefault()
 
 campoEmail.value = "";
 
-if (campoEmail.value.length === "0") {
+if (campoEmail.value.length === "") {
   mensagemEmail.innerHTML = "Digite seu email";
 } else {
   mensagemEmail.innerHTML = "";
