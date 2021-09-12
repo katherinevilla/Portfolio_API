@@ -1,7 +1,9 @@
 let botaoEnviar = document.getElementById('botaoEnviar')
+let formulario = document.getElementsByClassName ("fomu_contato")
+  
 
 botaoEnviar.addEventListener('click', (event) => {
-    event.preventDefault()
+    
 
 let campoNome = document.getElementById("nome");
 let mensagemNome = document.getElementById("mensagemNome");
@@ -10,18 +12,18 @@ let campoEmail = document.getElementById("email");
 let mensagemEmail = document.getElementById("mensagemEmail");
 let Fone = document.getElementById ("Fone");
 let mensagemFone = document.getElementById ("mensagemFone");
-
 let campoMensagem = document.getElementById("Mensagem");
 let mensagemMensagem = document.getElementById("mensagemMensagem");
 
 
-campoNome.value = "";
+//campoNome.value = "";
 
 if (campoNome.value.length === 0) {
   mensagemNome.innerHTML = "Digite seu nome";
 } else {
   mensagemNome.innerHTML = "";
 }
+event.preventDefault()
 
 campoEmail.value = "";
 
@@ -73,12 +75,12 @@ promessa
     let url = repositorio.html_url;
     let nome = repositorio.name;
       nomes.push(`
-      <li> 
-      <a href = "$ {url}"> ${url}
-      </a>
-      </li>
-      `);
-      }
+    <li> 
+    <a href = "$ {url}"> ${url}
+    </a>
+    </li>
+    `);
+    }
       
-      githubRepositorios.innerHTML = nomes;
+ githubRepositorios.innerHTML = nomes;
   });
