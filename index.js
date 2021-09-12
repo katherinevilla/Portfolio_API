@@ -30,6 +30,14 @@ if (campoEmail.value.length === "0") {
 } else {
   mensagemEmail.innerHTML = "";
 }
+
+if (campoEmail.value.indexOf("@") === -1 || campoEmail.value.indexOf(".") === -1 || (campoEmail.value.indexOf(".") - campoEmail.value.indexOf("@") === 1)) {
+  campoEmail.classList.add("errorInput")
+} else {
+  campoEmail.classList.remove("errorInput")
+}
+
+
 Fone.value = "";
 
 if (Fone.value.length === 0) {
